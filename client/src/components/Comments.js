@@ -6,7 +6,10 @@ const Comments = props => {
         <div className='comments'>
             {comments.map(comment => {
                 return (
-                    <p>{comment.content}</p>
+                    <div style={{display: "flex"}}>
+                        <p>{comment.content}</p>
+                        <p>{comment.status}</p>
+                    </div>
                 )
             })}
         </div>

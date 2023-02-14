@@ -1,7 +1,7 @@
 import {get, post} from './BaseApi';
 
 export const getPosts = () => {
-    const url = `${process.env.REACT_APP_POST_SERVICE_URL}/posts`;
+    const url = `${process.env.REACT_APP_QUERY_SERVICE_URL}/posts`;
     return get(url);
 }
 

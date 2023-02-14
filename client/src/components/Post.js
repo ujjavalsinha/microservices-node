@@ -5,20 +5,10 @@ import { getComments, postComments } from '../services/CommentService';
 
 const Post = props => {
     const { post } = props;
-    const [comments, setComments] = useState([])
-    const { id, title } = post;
-    const fetchComments = () => {
-        getComments(id)
-        .then(res => setComments(res.data))
-    }
-
-    useEffect(() => {
-        fetchComments()
-    }, [id])
+    const { id, title, comments } = post;
 
     const onCommentSubmit = (body) => {
         postComments(id, body)
-        .then(res => fetchComments())
     }
 
     return (
